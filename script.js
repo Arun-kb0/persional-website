@@ -34,7 +34,7 @@ $(document).ready(function () {
 })
 
 
-
+// sidebar buttons action
 $(document).ready(function () {
   const navContent = document.querySelectorAll('.navContent')
   const profile = document.getElementsByClassName("profile")
@@ -109,4 +109,28 @@ $(document).ready(function () {
 
     }
   }
+})
+
+
+// form validation 
+$(document).ready(function(){
+  $('#form').validate({
+    errorClass:'error fail-alert',
+    validClass:'valid success-alert',
+    rules:{
+      name:{
+        required:true,
+      },
+      email:{
+        required:true,
+        email:true
+      },
+      subject:{
+        required:true
+      }
+    },
+    messages:{
+
+    }
+  })
 })

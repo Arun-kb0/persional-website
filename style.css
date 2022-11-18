@@ -3,8 +3,8 @@ body {
     font-family: "Open Sans", sans-serif;
     color: whitesmoke;
     font-size: 17px;
-   
-    
+
+
 
 }
 
@@ -138,8 +138,7 @@ body {
 }
 
 .home.active,
-.work.active,
-.message.active {
+.work.active {
     font-size: 29px;
     margin: 153px 232px 19% 315px;
     padding: 10px;
@@ -175,6 +174,19 @@ body {
 
 }
 
+.about h3 {
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.about h4 {
+    margin-top: -3px;
+    margin-bottom: 10px;
+    font-size: 23px;
+
+}
+
+
 .about.active h2 {
     padding: 10px;
     margin-right: 11%;
@@ -209,16 +221,37 @@ body {
 
 }
 
-.resume.active h2 {
+h2 {
     padding: 10px;
     margin-right: 11%;
     width: 100%;
     height: 10%;
     font-size: 40px;
     margin-top: 1%;
+
+
+    /* border-color: linear-gradient(to right, #fc5c7d, #6a82fb);; */
+    /* background-image: linear-gradient(to right, #fc5c7d, #6a82fb); */
+
+    border-color: linear-gradient(0deg, rgba(0, 118, 255, 1) 35%, rgba(77, 77, 255, 1) 65%, rgba(205, 0, 188, 1) 100%);
+    background-image: linear-gradient(0deg, rgba(0, 118, 255, 1) 35%, rgba(77, 77, 255, 1) 65%, rgba(205, 0, 188, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+.resume.active h2 {
+
+    /* border-color: linear-gradient(to right, #fc5c7d, #6a82fb);; */
+    /* background-image: linear-gradient(to right, #fc5c7d, #6a82fb); */
+
+    border-color: linear-gradient(0deg, rgba(0, 118, 255, 1) 35%, rgba(77, 77, 255, 1) 65%, rgba(205, 0, 188, 1) 100%);
+    background-image: linear-gradient(0deg, rgba(0, 118, 255, 1) 35%, rgba(77, 77, 255, 1) 65%, rgba(205, 0, 188, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .resume.active h3 {
-    margin-top: 1px;
+
     font-size: 30px;
 }
 
@@ -226,29 +259,35 @@ body {
 .resume.active .left-sec,
 .resume.active .right-sec {
     height: 600px;
-    margin:  5px 20px 20px 5px;
+    margin: -34px 20px 20px 5px;
+    padding-bottom: 10px;
     position: relative;
     width: 47%;
     float: left;
+
     /* background-color: #4D4DFF; */
 }
 
 
 
-.resume.active .item h4{
+.resume.active .item h4 {
     margin-top: -3px;
     margin-bottom: 10px;
     font-size: 23px;
-   
-}
-.resume.active .item h5{
- margin: 10px 0 0px 0px;
- font-family: "Segoe UI";
- 
+
 }
 
-.resume.active .item small
-{
+.resume.active .item h5 {
+    margin: 10px 0 0px 0px;
+    font-family: "Segoe UI";
+    font-style: italic;
+
+
+
+
+}
+
+.resume.active .item small {
     font-family: "Segoe UI";
 }
 
@@ -286,6 +325,7 @@ body {
     display: block;
     background: none;
     border-radius: 0;
+    padding-right: 10px;
 }
 
 .skills .progress .skill {
@@ -311,6 +351,7 @@ body {
     border-radius: 5px;
     background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
 }
+
 .progress {
     --bs-progress-height: 1rem;
     --bs-progress-font-size: 0.75rem;
@@ -328,9 +369,197 @@ body {
     border-radius: var(--bs-progress-border-radius);
 }
 
-.skills i{
-    margin-left: 80%
+
+.skills i {
+    margin-left: 90%
 }
+
 .skills {
     margin-left: 9px;
+    margin-top: 2px;
+}
+
+.skill p {
+    margin-bottom: -13px;
+}
+
+
+.skills #react {
+    width: 50%;
+}
+
+.skills #html {
+    width: 80%;
+}
+
+.skills #css {
+    width: 65%;
+}
+
+.skills #js {
+    width: 60%;
+}
+
+.skills #java {
+    width: 60%;
+}
+
+.skills #python {
+    width: 60%;
+}
+
+.skills #aws {
+    width: 40%;
+}
+
+.skills #git {
+    width: 70%;
+}
+
+.skills #mongodb {
+    width: 40%;
+}
+
+/* knowledge */
+.skills .knw-title {
+    padding: 2px;
+    background: #4D4DFF;
+    width: fit-content;
+    border: none;
+    border-radius: 7px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 1px;
+}
+
+.skills.knw {
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+
+.experience h3 {
+    margin-top: 20px;
+}
+
+
+/* message */
+.message.active {
+    display: contents;
+}
+
+.message .msg-text,
+.message .form {
+    height: 600px;
+    margin: 0px 20px 20px 5px;
+    padding-bottom: 10px;
+    position: relative;
+    float: left;
+    /* background-color: gold; */
+}
+
+.message .msg-text {
+    width: 20%;
+    margin-left: 55px;
+}
+
+.message .email-form {
+    width: 50%;
+    margin-left: 328px;
+}
+
+
+.msg-text .msg-item {
+    background: #383838;
+    border: none;
+    border-radius: 7px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.msg-text .msg-item i {
+    font-size: 35px;
+    padding: 16px 0px 1px 53px;
+}
+
+.msg-text .msg-item p {
+    font-size: 15px;
+}
+
+
+/* form */
+.email-form form {
+    display: inline-grid;
+}
+
+.email-form input {
+    padding: 10px 0px 10px 10px;
+    width: 200%;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.email-form .email-msg {
+    margin-left: 0;
+
+}
+
+.email-form textarea {
+    width: 200%;
+    border-style: double;
+    border-radius: 12px;
+    padding: 5px;
+    height: 300%;
+    font-size: 15px;
+
+}
+
+.email-form .submit-btn {
+    display: flow-root;
+    position: absolute;
+    margin: 391px 0px 0px 117px;
+    padding: 10px 40px 10px 40px;
+    border: solid #4D4DFF;
+    border-radius: 25px;
+    background: #222222;
+    color: whitesmoke;
+    font-size: 17px;
+}
+
+.submit-btn:hover {
+    background-image: linear-gradient(0deg, rgba(0, 118, 255, 1) 35%, rgba(77, 77, 255, 1) 65%, rgba(205, 0, 188, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.email-form input:focus {
+    outline: transparent;
+    border-color: #1b74e4;
+    box-shadow: 0 0 0 2px #6baaea;
+    caret-color: #1b74e4;
+}
+
+.email-form textarea:focus {
+    outline: transparent;
+    border-color: #1b74e4;
+    box-shadow: 0 0 0 2px #6baaea;
+    caret-color: #1b74e4;
+}
+
+
+label.error.fail-alert {
+    color: #BA0021;
+    display: block;
+}
+
+input.error {
+    border: 2px solid #BA0021;
+}
+
+input.valid {
+    border: 2px solid #1DB954;
 }
