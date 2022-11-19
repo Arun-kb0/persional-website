@@ -45,22 +45,25 @@ $(document).ready(function () {
   const work = document.getElementsByClassName('work')
   const message = document.getElementsByClassName('message')
 
-
+  home[0].classList.add('active')
+  animations()
   for (let i = 0; i < navContent.length; i++) {
-//home
+    //home
     navContent[0].onclick = () => {
 
       home[0].classList.add('active')
+      animations()
+
 
       about[0].classList.remove('active')
       resume[0].classList.remove('active')
       work[0].classList.remove('active')
       message[0].classList.remove('active')
-      
+
       console.log(home[0])
     }
     //about
-    navContent[1].onclick=()=>{
+    navContent[1].onclick = () => {
       about[0].classList.add('active')
       // profile[0].classList.add('about')
 
@@ -69,35 +72,35 @@ $(document).ready(function () {
       resume[0].classList.remove('active')
       work[0].classList.remove('active')
       message[0].classList.remove('active')
-      
+
       console.log(about[0])
 
     }
-//skill
-    navContent[2].onclick=()=>{
+    //skill
+    navContent[2].onclick = () => {
       resume[0].classList.add('active')
 
       home[0].classList.remove('active')
       about[0].classList.remove('active')
       work[0].classList.remove('active')
       message[0].classList.remove('active')
-      
+
       console.log(resume[0])
 
     }
-//work
-    navContent[3].onclick=()=>{
+    //work
+    navContent[3].onclick = () => {
       work[0].classList.add('active')
 
       home[0].classList.remove('active')
       resume[0].classList.remove('active')
       about[0].classList.remove('active')
       message[0].classList.remove('active')
-      
+
       console.log(work[0])
 
     }//message
-    navContent[4].onclick=()=>{
+    navContent[4].onclick = () => {
       message[0].classList.add('active')
 
       home[0].classList.remove('active')
@@ -109,28 +112,56 @@ $(document).ready(function () {
 
     }
   }
+  // animation
+
+  function animations() {
+
+    const text = baffle('.data-name');
+    text.set({
+      characters: 'zpxzVpasdfh86136░█▒ ░░░█▓ >░░ ▓/▒█▓ █ █>█▒sayg▒ ░░░█▓ >yf',
+      speed: 150
+    });
+    text.start();
+    text.reveal(80000);
+
+    const text1 = baffle('.quote-text');
+    text1.set({
+      characters: 'qwertyuiopasdfgh8613611888',
+      speed: 130
+    });
+    text1.start();
+    text1.reveal(5500);
+
+    return;
+  }
+
+
 })
 
 
 // form validation 
-$(document).ready(function(){
+$(document).ready(function () {
   $('#form').validate({
-    errorClass:'error fail-alert',
-    validClass:'valid success-alert',
-    rules:{
-      name:{
-        required:true,
+    
+    errorClass: 'error fail-alert',
+    validClass: 'valid success-alert',
+    rules: {
+      name: {
+        required: true,
       },
-      email:{
-        required:true,
-        email:true
+      email: {
+        required: true,
+        email: true
       },
-      subject:{
-        required:true
+      subject: {
+        required: true
       }
     },
-    messages:{
+    messages: {
 
     }
   })
 })
+
+
+
