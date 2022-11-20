@@ -38,6 +38,8 @@ $(document).ready(function () {
 $(document).ready(function () {
   const navContent = document.querySelectorAll('.navContent')
   const profile = document.getElementsByClassName("profile")
+  // const profile = document.getElementById("profile")
+
   const contents = document.querySelectorAll(".contents")
   const home = document.getElementsByClassName('home')
   const about = document.getElementsByClassName('about')
@@ -45,15 +47,18 @@ $(document).ready(function () {
   const work = document.getElementsByClassName('work')
   const message = document.getElementsByClassName('message')
 
+
   home[0].classList.add('active')
+  profile[0].classList.add('animate')
   animations()
+
   for (let i = 0; i < navContent.length; i++) {
     //home
     navContent[0].onclick = () => {
 
-      home[0].classList.add('active')
       animations()
-
+      profileAnimate()
+      contentActive(home)
 
       about[0].classList.remove('active')
       resume[0].classList.remove('active')
@@ -64,9 +69,10 @@ $(document).ready(function () {
     }
     //about
     navContent[1].onclick = () => {
-      about[0].classList.add('active')
-      // profile[0].classList.add('about')
 
+      profileAnimate()
+      contentActive(about)
+      // about[0].classList.add('active')
 
       home[0].classList.remove('active')
       resume[0].classList.remove('active')
@@ -78,7 +84,10 @@ $(document).ready(function () {
     }
     //skill
     navContent[2].onclick = () => {
-      resume[0].classList.add('active')
+
+      profileAnimate()
+      contentActive(resume)
+      // resume[0].classList.add('active')
 
       home[0].classList.remove('active')
       about[0].classList.remove('active')
@@ -90,7 +99,10 @@ $(document).ready(function () {
     }
     //work
     navContent[3].onclick = () => {
-      work[0].classList.add('active')
+      
+      profileAnimate()
+      contentActive(work)
+      // work[0].classList.add('active')
 
       home[0].classList.remove('active')
       resume[0].classList.remove('active')
@@ -101,7 +113,10 @@ $(document).ready(function () {
 
     }//message
     navContent[4].onclick = () => {
-      message[0].classList.add('active')
+
+      profileAnimate()
+      contentActive(message)
+      // message[0].classList.add('active')
 
       home[0].classList.remove('active')
       resume[0].classList.remove('active')
@@ -112,10 +127,61 @@ $(document).ready(function () {
 
     }
   }
-  // animation
 
+// activates content 
+function contentActive(arr){
+  const list = ['home','about','resume','work','message']
+  
+  elName = arr[0].classList
+
+  list.map((el)=>{
+    if(el === elName[0]){
+      console.log('content Active ')
+     
+      if(arr[0].classList.length == 2){
+
+        // home[0].classList.remove('active')
+        // about[0].classList.remove('active')
+        // resume[0].classList.remove('active')
+        // work[0].classList.remove('active')
+        // message[0].classList.remove('active')
+
+        setTimeout(()=>{
+          arr[0].classList.add('active')
+        },1)
+      
+      }else if(arr[0].classList.length == 1){
+        arr[0].classList.add('active')
+      }
+    }
+
+  } )
+ 
+}
+
+  //profile animation
+  function profileAnimate() {
+    console.log(profile[0].classList.length)
+
+    if (profile[0].classList.length === 2) {
+
+      profile[0].classList.remove('animate')
+      setTimeout(() => {
+        profile[0].classList.add('animate')
+      },1)
+      console.log(profile[0])
+
+    } else if (profile[0].classList.length === 1) {
+
+      profile[0].classList.add('animate')
+      console.log(profile[0])
+
+    }
+  }
+
+
+  // name animation
   function animations() {
-
     const text = baffle('.data-name');
     text.set({
       characters: 'zpxzVpasdfh86136░█▒ ░░░█▓ >░░ ▓/▒█▓ █ █>█▒sayg▒ ░░░█▓ >yf',
@@ -136,18 +202,21 @@ $(document).ready(function () {
   }
 
 
+
+
 })
 
 
 // form validation 
 $(document).ready(function () {
   $('#form').validate({
-    
+
     errorClass: 'error fail-alert',
     validClass: 'valid success-alert',
     rules: {
       name: {
         required: true,
+       
       },
       email: {
         required: true,
@@ -158,7 +227,9 @@ $(document).ready(function () {
       }
     },
     messages: {
-
+      email:{
+        email:'Inavlid email'
+      }
     }
   })
 })
