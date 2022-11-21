@@ -195,6 +195,8 @@ h3 {
     position: fixed;
     margin: 6% 1% 14% 91%;
     border-radius: 45px;
+   
+    padding: 20px 0px 20px 0px;
 }
 
 .navContent {
@@ -285,7 +287,7 @@ h3 {
 }
 
 .about.active .discription {
-    width: 50%;
+    width: 83%;
     padding: 1px;
     margin-left: 10px;
 }
@@ -293,7 +295,8 @@ h3 {
 .about.active .details {
     width: 50%;
     padding: 10px;
-    padding-left: 14%;
+    margin-left: 68px;
+    
 
 }
 

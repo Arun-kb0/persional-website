@@ -46,6 +46,8 @@ $(document).ready(function () {
   const resume = document.getElementsByClassName('resume')
   const work = document.getElementsByClassName('work')
   const message = document.getElementsByClassName('message')
+  
+
 
 
   home[0].classList.add('active')
@@ -200,15 +202,15 @@ function contentActive(arr){
 
     return;
   }
-
-
-
-
 })
 
 
 // form validation 
 $(document).ready(function () {
+  const form = document.getElementById("form")
+  const submitBtn = document.getElementById("submit-btn")
+
+
   $('#form').validate({
 
     errorClass: 'error fail-alert',
@@ -232,7 +234,12 @@ $(document).ready(function () {
       }
     }
   })
-})
 
+  // form.onsubmit= ()=>{
+  //   $.get("https://formsubmit.co/el/focetu");
+  // }
+
+  
+})
 
 
